@@ -16,7 +16,8 @@ With GPIO being a digital pin, it can be in one of two states:
 
 - **HIGH** (3.3V)
 - **LOW** (0V)
-  > Sometimes, development boards such as the Arduino will have HIGH as 5V, but the STM32 that you will be working with will use 3.3V as HIGH.
+
+> Sometimes, development boards such as the Arduino will have HIGH as 5V, but the STM32 that you will be working with will use 3.3V as HIGH.
 
 GPIOs can be programmed for various tasks. You can configure a GPIO to be either an:
 
@@ -27,7 +28,6 @@ GPIOs can be programmed for various tasks. You can configure a GPIO to be either
 
 
 >You can also use GPIO inputs and outputs to emulate digital communication protocols using a technique known as [bit-banging](<https://en.wikipedia.org/wiki/Bit_banging>).
-=======
 
 
 ### Exercise 1: Using a Button to Turn On an LED
