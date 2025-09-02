@@ -31,7 +31,8 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-
+#define LD2_Pin GPIO_PIN_5
+#define LD2_GPIO_Port GPIOA
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -97,18 +98,19 @@ int main(void) {
   /* USER CODE BEGIN WHILE */
   while (1) {
     /* USER CODE END WHILE */
+	
+  
+    	
+    /*Blinky exercise:*/ 
 
-    /**
 
-    Blinky exercise: 
+    /*Don't write code outside the while loop.*/
 
-
-    Don't write code outside the while loop.
-
+    HAL_GPIO_TogglePin(LD2_GPIO_Port, LD2_Pin);
+    HAL_Delay(500);	
     
-    Delete this comment and write your code here.
     
-    */
+    
 
     /* USER CODE BEGIN 3 */
   }
