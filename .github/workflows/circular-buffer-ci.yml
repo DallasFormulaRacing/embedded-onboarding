@@ -1,0 +1,45 @@
+name: Circular Buffer CI
+
+on:
+  push:
+    branches: [ "**" ]
+    paths:
+      - "section-01/circular-buffer-lib/**"
+      - ".github/workflows/circular-buffer-ci.yml"
+  pull_request:
+    branches: [ "**" ]
+    paths:
+      - "section-01/circular-buffer-lib/**"
+      - ".github/workflows/circular-buffer-ci.yml"
+
+defaults:
+  run:
+    working-directory: section-01/circular-buffer-lib
+
+jobs:
+  linux-build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install toolchain
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential
+
+      - name: Build
+        run: |
+          make clean || true
+          make -j
+
+      - name: Run tests
+        run: |
+          if make -q test 2>/dev/null; then
+            make test
+          elif make -q run 2>/dev/null; then
+            make run
+          else
+            echo "No test or run target found in Makefile"
+            exit 1
+          fi
