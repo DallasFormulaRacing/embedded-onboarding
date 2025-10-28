@@ -18,9 +18,37 @@ Do the exact same for `void HAL_GPIO_WritePin(GPIO_TypeDef* GPIOx, uint16_t GPIO
 
 ## Exercise 2: DIY HAL in Asm
 
-Write excercise 1 in assembly. Use ARM Cortex-M (Thumb-2) assembly and the `arm-none-eabi` calling convention.
+Write your own GPIO Init, GPIO toggle, and HAL Delay in assembly. The total length of the assembly file should not more than 70 lines.
 
-What did you learn? Write your response in another file in this directory.
+The goal of this exercise is to help you understand that HAL functionality ultimately reduces to bitwise manipulation of certain peripheral registers.
+
+Read carefully:
+
+A starter `gpio.s` assembly source file has been provided. It has been tested on an STM32L4. (Not the STM32F0, which is what you should use). There are multiple missing statements in the file. You must fill in the blanks as necessary to get the LED (whichever one you want, recommend a User LED and not a power LED) blinking.
+
+While there are missing words or numbers, there are no missing lines. You do not need to write separate lines of assembly.
+
+An accompanying `gpio.h` header file has also been provided. You do not need to edit it.
+
+These standalone files will not function properly. You are responsible for moving the source file into `Core/Src` and the header file into `Core/Inc`. You are also responsible for editing your Makefile to account for a new source file.
+
+Your main function should look like this:
+
+```C
+int main(void)
+{
+  my_gpio_init(GPIOA_BASE, 5, 0x01);
+
+  while(1) {
+    my_gpio_toggle(GPIOA_BASE, 5);
+    my_hal_delay(100);
+  }
+}
+```
+
+You should then see your LED blink.
+
+What did you learn? Explain each line of assembly (no complete sentences, just what it does and why). Write your response in another file in this directory.
 
 Ensure both compile.
 
