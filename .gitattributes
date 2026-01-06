@@ -2,3 +2,6 @@
 *.o linguist-language=C
 *.i linguist-language=C
 *.s linguist-language=Assembly
+
+section-01/blinky linguist-vendored=true
+section-01/blinky linguist-generated=true
