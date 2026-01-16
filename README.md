@@ -25,14 +25,14 @@ c) you demonstrate that you should not be allowed to operate independently in th
 
 This tutorial set assumes a \*NIX environment (operating system). This includes:
 
-- macOS (this tutorial was developed on macOS)
-- all Linux distributions which includes but is not limited to
+-   macOS (this tutorial was developed on macOS)
+-   all Linux distributions which includes but is not limited to
 
-  - Arch
-  - Ubuntu
-  - Debian
+    -   Arch
+    -   Ubuntu
+    -   Debian
 
-- freeBSD and openBSD
+-   freeBSD and openBSD
 
 All further instructions are written under the assumption that your environment is [POSIX compliant](https://stackoverflow.com/questions/1780599/what-is-the-meaning-of-posix).
 
@@ -40,10 +40,10 @@ If you're using Windows, you'll need a compatible environment to follow along ef
 
 1. Using MSYS2's MINGW64 environment: This provides a Unix-like shell for Windows.
 
-2. **Windows Subsystem for Linux (WSL): Provides a native Linux environment on Windows. Suitable for most development workflows. (Recommended) ** 
+2. **Windows Subsystem for Linux (WSL): Provides a native Linux environment on Windows. Suitable for most development workflows. (Recommended) **
 
 3. Dual Boot Setup: Install Linux alongside Windows and choose your operating system at startup.
-   > Note: If you are setting up a dual boot alongside Windows, make sure you have access to your Microsoft account because you will need to your Bitlocker decryption key otherwise you will lose all your data.
+    > Note: If you are setting up a dual boot alongside Windows, make sure you have access to your Microsoft account because you will need to your Bitlocker decryption key otherwise you will lose all your data.
 
 You can read more [here](https://github.com/DallasFormulaRacing/embedded-onboarding/wiki/DEnvironment).
 
@@ -51,17 +51,15 @@ You can also see the Windows setup [guide](SETUP.md) I wrote when we migrated fr
 
 ## Table of Contents
 
-| Section | Title                          | Difficulty | Learning Outcomes                                                                                                                                                                                                                      |
-| ------- | ------------------------------ | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 00      | Introduction & Version Control | -          | Basic grasp of embedded programming and an full understanding of git.                                                                                                                                                                  |
-| 01      | The C Language                 | +          | Fundamental C programming concepts: control structures, pointers, structs, memory, basic data structures, volatile and weak.                                                                                                           |
-| 02      | Computer Architecture          | +++        | Understanding of registers, compiler process, linking, RAM, stack and heap memory, working knowledge of ARMv8 assembly.                                                                                                                |
-| 03      | Peripherals and Protocols      | ++         | Interfacing with external modules. Know and understand CAN, I2C, SPI, GPIO. Know how to utilize DMA. Using the STM32 HAL to interface with peripherals.                                                                                |
-| 04      | Operating Systems              | +++        | Understanding of inner workings of operating systems, RTOS. Know how and what a scheduler does and works. Know how processes and threads work with each other. Understand parallelism and concurrency. Understand interrupts.          |
-| 05      | Hardware and Signal Processing | ++++       | Analog and digital signals and converting between the two. Basics of EMI mitigation. Signal processing and filtering basics. Introduction to filtering. CMSIS libraries. Debugging with JTAG and OpenOCD. Creating the IOC and pinout. |
-| 06      | Final Project                  | +++        | Create a rudimentary data acquisition system; no hardware design required. Send information with print over UART.                                                                                                                      |
-
-
+| Section | Title                          | Difficulty | Learning Outcomes                                                                                                                                                                                                                      | -        |
+| ------- | ------------------------------ | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| 00      | Introduction & Version Control | -          | Basic grasp of embedded programming and an full understanding of git.                                                                                                                                                                  | Required |
+| 01      | The C Language                 | +          | Fundamental C programming concepts: control structures, pointers, structs, memory, basic data structures, volatile and weak.                                                                                                           | Required |
+| 02      | Computer Architecture          | +++        | Understanding of registers, compiler process, linking, RAM, stack and heap memory, working knowledge of ARMv8 assembly.                                                                                                                | Optional |
+| 03      | Peripherals and Protocols      | ++         | Interfacing with external modules. Know and understand CAN, I2C, SPI, GPIO. Know how to utilize DMA. Using the STM32 HAL to interface with peripherals.                                                                                | Required |
+| 04      | Operating Systems              | +++        | Understanding of inner workings of operating systems, RTOS. Know how and what a scheduler does and works. Know how processes and threads work with each other. Understand parallelism and concurrency. Understand interrupts.          | Optional |
+| 05      | Hardware and Signal Processing | ++++       | Analog and digital signals and converting between the two. Basics of EMI mitigation. Signal processing and filtering basics. Introduction to filtering. CMSIS libraries. Debugging with JTAG and OpenOCD. Creating the IOC and pinout. | Optional |
+| 06      | Final Project                  | +++        | Create a rudimentary data acquisition system; no hardware design required. Send information with print over UART.                                                                                                                      | Optional |
 
 ## References
 
